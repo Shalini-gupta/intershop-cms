@@ -5,10 +5,11 @@ import { SharedModule } from 'ish-shared/shared.module';
 
 import { HomePageComponent } from './home-page.component';
 
-const homePageRoutes: Routes = [{ path: '', component: HomePageComponent, data: { wrapperClass: 'homepage' } }];
+import {HomeContentfulPageComponent} from '../home-contentful/home-contentful-page.component';
 
+const homePageRoutes: Routes = [{ path: '', component: HomePageComponent, data: { wrapperClass: 'homepage' } }];
 @NgModule({
   imports: [RouterModule.forChild(homePageRoutes), SharedModule],
-  declarations: [HomePageComponent],
+  declarations: [HomePageComponent,HomeContentfulPageComponent],
 })
 export class HomePageModule {}

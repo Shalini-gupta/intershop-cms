@@ -8,6 +8,8 @@ import { TactonConfig } from '../app/extensions/tacton/models/tacton-config/tact
 
 export interface Environment {
   /* INTERSHOP COMMERCE MANAGEMENT REST API CONFIGURATION */
+  space: string;
+  accessToken: string;
   icmBaseURL: string;
   icmServer: string;
   icmServerStatic: string;
@@ -111,6 +113,8 @@ export interface Environment {
 
 export const ENVIRONMENT_DEFAULTS: Omit<Environment, 'icmChannel'> = {
   /* INTERSHOP COMMERCE MANAGEMENT REST API CONFIGURATION */
+  space: 'q2ml2tklknz7',
+  accessToken: 'DWUOR0cmJb9TF9W5NmolGXrpk8KTSsp6IknigoP9-Ro',
   icmBaseURL: 'https://pwa-ish-demo.test.intershop.com',
   icmServer: 'INTERSHOP/rest/WFS',
   icmServerStatic: 'INTERSHOP/static/WFS',
